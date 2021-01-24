@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="r.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap.css">
+</head>
+<body class="b">
+	<div class="calcu">
+		<input type="text" name="result" class="p">
+		    <div class="calcu-butons">
+
+
+			    <button class="cal-btn btn-d" onclick="r(7)">7</button>
+			    <button class="cal-btn btn-d" onclick="r(8)">8</button>
+			    <button class="cal-btn btn-d"onclick="r(9)">9</button>
+			    <button class="cal-btn btn-function" onclick="r('*')">*</button>
+			
+			     <button class="cal-btn btn-d" onclick="r(4)">4</button>
+				<button class="cal-btn btn-d "onclick="r(5)">5</button>
+				<button class="cal-btn btn-d" onclick="r(6)">6</button>
+				<button class="cal-btn btn-function"onclick="r('-')">-</button>
+				
+				
+				<button class="cal-btn btn-d" onclick="r(1)">1</button>
+				<button class="cal-btn btn-d" onclick="r(2)">2</button>
+				<button class="cal-btn btn-d"onclick="r(3)">3</button>
+				<button class="cal-btn btn-function" onclick="r('+')">+</button>			
+		 		
+				<button class="cal-btn btn-d" onclick="r(0)">0</button>
+				<button class="cal-btn btn-d" onclick="r()"></button>
+				<button class="cal-btn btn-d"onclick="showresult()">=</button>
+				<button class="cal-btn btn-function" onclick="r('/')">/</button>
+			</div>
+            	<button class=" btn-special" onclick="clearinput()">Clear</button>
+		    
+  
+
+        
+    </div>
+</body>
+<script>
+	function r(a) {
+		document.getElementsByName('result')[0].value += a;
+		// body...
+	}
+	function showresult() {
+		var d=document.getElementsByName('result')[0].value;
+		var c=eval(d)
+		document.getElementsByName('result')[0].value = c;
+	}
+	function clearinput() {
+		document.getElementsByName('result')[0].value = ""
+		
+	}
+</script>
+</html>
